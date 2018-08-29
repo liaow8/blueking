@@ -10,10 +10,10 @@ See the License for the specific language governing permissions and limitations 
 """
 
 from common.mymako import render_mako_context
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
-def index(request):
-	return HttpResponse('Hello World!')
+# def index(request):
+	# return HttpResponse('Hello World!')
 
 def home(request):
     """
@@ -34,3 +34,9 @@ def contactus(request):
     联系我们
     """
     return render_mako_context(request, '/home_application/contact.html')
+	
+def hello_world(request):
+    """
+    helloworld
+    """
+    return render_mako_context(request, '/home_application/hello_world.html')
